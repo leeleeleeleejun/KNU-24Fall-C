@@ -16,6 +16,6 @@ int main() {
 	person[0].snum = 1111;
 	strcpy_s(person[0].name, 100, "Ã¶¼ö");
 	person[0].score = 100;
-
+	 
 	printf("%d %s %d\n", person[0].snum, person[0].name, person[0].score);
 }
