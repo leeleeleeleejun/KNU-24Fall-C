@@ -14,7 +14,7 @@ int main() {
 	srand((double)time(NULL));
 
 	for (i; i <= 100; i++) {
-		while (10000000 * i > count){
+		while (10000000 * i > count) {
 
 			x = (double)rand() / (double)RAND_MAX;
 			y = (double)rand() / (double)RAND_MAX;
@@ -26,10 +26,18 @@ int main() {
 			count++;
 
 		}
-		
-		printf("%d %%진행..원주율 = %f\n", i, (circle / count) * 4.0);
 
+		printf("%d %%진행.. 원주율 : %f ", i, (circle / count) * 4.0);
+
+
+
+		for (int j = 1; j <= i * 20 / 100; j++) {
+			printf("■");
+		}
+		for (int j = 1; j <= 20 - (i * 20 / 100); j++) {
+			printf("□");
+		}
+		printf("\n");
 	}
 
-	
 }
