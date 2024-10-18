@@ -22,7 +22,6 @@ void printArray(int array[SIZE][SIZE]) {
 }
 
 void movePointer(void* array) {
-	int moving = ((int*)array);
 	int result = 0;
 	int x = 0;
 	int y = 0;
