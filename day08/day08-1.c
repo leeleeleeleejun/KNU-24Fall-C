@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS // scanf º¸¾È °æ°í·Î ÀÎÇÑ ÄÄÆÄÀÏ ¿¡·¯ ¹æÁö
+#define _CRT_SECURE_NO_WARNINGS // scanf ë³´ì•ˆ ê²½ê³ ë¡œ ì¸í•œ ì»´íŒŒì¼ ì—ëŸ¬ ë°©ì§€
 #include <stdio.h>
 #include <string.h>
 
@@ -10,9 +10,8 @@ void reverseFunc(char* pnum1, char* pnum2) {
 
 int main() {
     char s1[100]; 
-    int *p = s1;
 
-    printf("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš”: ");
     scanf("%s", s1);
     int len = strlen(s1);
 
@@ -20,7 +19,7 @@ int main() {
         reverseFunc(&s1[i], &s1[len - 1 - i]);
     }
 
-    printf("µÚÁıÈù ¹®ÀÚ¿­: %s\n", s1);
+    printf("ë’¤ì§‘íŒ ë¬¸ìì—´: %s\n", s1);
 
     return 0;
 }
