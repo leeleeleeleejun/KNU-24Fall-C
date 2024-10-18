@@ -28,12 +28,12 @@ void movePointer(void* array) {
 	for (int i = 0; i < SIZE * SIZE; i++) {
 		printf("현재 위치 (%d , %d),", x, y);
 		printf("배열의 값 %d \n", ((int*)array)[i]);
-		
+		result = ((int*)array)[i];
+
 		if (x * 10 + y + result >= 100) {
 			break;
 		}
 		
-		result = ((int*)array)[i];
 		x += ((int*)array)[i] / 10;
 		y += ((int*)array)[i] % 10;
 		if (y >= 10) {
