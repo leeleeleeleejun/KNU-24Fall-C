@@ -12,7 +12,7 @@ void fillRandom(int array[SIZE][SIZE]) {
 }
 
 void printArray(int array[SIZE][SIZE]) {
-	printf("¹è¿­ Ãâ·Â : \n");
+	printf("ë°°ì—´ ì¶œë ¥ : \n");
 	for (int i = 0; i < SIZE; i++) {
 		for (int j = 0; j < SIZE; j++) {
 			printf("%d ", array[i][j]);
@@ -27,8 +27,8 @@ void movePointer(void* array) {
 	int x = 0;
 	int y = 0;
 	for (int i = 0; i < SIZE * SIZE; i++) {
-		printf("ÇöÀç À§Ä¡ (%d , %d),", x, y);
-		printf("¹è¿­ÀÇ °ª %d \n", ((int*)array)[i]);
+		printf("í˜„ìž¬ ìœ„ì¹˜ (%d , %d),", x, y);
+		printf("ë°°ì—´ì˜ ê°’ %d \n", ((int*)array)[i]);
 
 		result = ((int*)array)[i];
 		x += ((int*)array)[i] / 10;
@@ -39,10 +39,10 @@ void movePointer(void* array) {
 		}
 		i += ((int*)array)[i] - 1;
 	}
-	printf("´õ ÀÌ»ó ÀÌµ¿ÇÒ ¼ö ¾ø½À´Ï´Ù. \n");
+	printf("ë” ì´ìƒ ì´ë™í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. \n");
 
-	printf("Á¾·á  À§Ä¡ (%d , %d),", x, y);
-	printf("¹è¿­ÀÇ °ª %d \n", result);
+	printf("ì¢…ë£Œ  ìœ„ì¹˜ (%d , %d),", x, y);
+	printf("ë°°ì—´ì˜ ê°’ %d \n", result);
 }
 
 int main() {
