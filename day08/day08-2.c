@@ -24,7 +24,7 @@ void printArray(int array[SIZE][SIZE]) {
 void movePointer(void* array) {
 	int x = 0;
 	int y = 0;
-	for (int i = 0; i < SIZE * SIZE; i++) {
+	for (int i = 0; i < SIZE * SIZE;) {
 		printf("현재 위치 (%d , %d),", x, y);
 		printf("배열의 값 %d \n", ((int*)array)[i]);
 
@@ -41,7 +41,7 @@ void movePointer(void* array) {
 			x += y / 10;
 			y = y % 10;
 		}
-		i += ((int*)array)[i] - 1;
+		i += ((int*)array)[i];
 	}
 }
 
@@ -54,4 +54,3 @@ int main() {
 
 	return;
 }
-
