@@ -22,18 +22,19 @@ void printArray(int array[SIZE][SIZE]) {
 }
 
 void movePointer(void* array) {
-	int result = 0;
 	int x = 0;
 	int y = 0;
 	for (int i = 0; i < SIZE * SIZE; i++) {
 		printf("현재 위치 (%d , %d),", x, y);
 		printf("배열의 값 %d \n", ((int*)array)[i]);
-		result = ((int*)array)[i];
 
-		if (x * 10 + y + result >= 100) {
+		if (x * 10 + y + ((int*)array)[i] >= 100) {
+			printf("더 이상 이동할 수 없습니다. \n");
+			printf("종료  위치 (%d , %d),", x, y);
+			printf("배열의 값 %d \n", ((int*)array)[i]);
 			break;
 		}
-		
+
 		x += ((int*)array)[i] / 10;
 		y += ((int*)array)[i] % 10;
 		if (y >= 10) {
@@ -42,10 +43,6 @@ void movePointer(void* array) {
 		}
 		i += ((int*)array)[i] - 1;
 	}
-	printf("더 이상 이동할 수 없습니다. \n");
-
-	printf("종료  위치 (%d , %d),", x, y);
-	printf("배열의 값 %d \n", result);
 }
 
 int main() {
